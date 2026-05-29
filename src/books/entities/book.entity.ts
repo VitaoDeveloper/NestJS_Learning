@@ -15,14 +15,14 @@ export class Book {
   name: string;
 
   // coluna FK — armazena o nome do gênero
-  @Column({ name: 'genre', nullable: true })
-  genre: string;
+  @Column({ name: 'genre_id', nullable: true })
+  genreId: UUID;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
 
   // relação — carrega o objeto Genre completo
   @ManyToOne(() => Genre, genre => genre.books, { nullable: true })
-  @JoinColumn({ name: 'genre', referencedColumnName: 'name' })
+  @JoinColumn({ name: 'genre_id' })
   genreRelation: Genre;
 }
