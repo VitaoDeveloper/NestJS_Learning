@@ -1,8 +1,7 @@
 import { DocumentBuilder } from "@nestjs/swagger";
 
 export const SwaggerConfig = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The cats API description')
-    .setVersion('1.0')
-    .addTag('cats')
+    .setTitle('Library API')
+    .setDescription('An API Service for library management')
+    .setVersion('2.0')
     .build();
